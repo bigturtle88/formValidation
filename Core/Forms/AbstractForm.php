@@ -10,9 +10,10 @@ namespace Core\Forms;
 
 abstract class AbstractForm
 {
-   private $hi;
+    private $method;
+    private $action;
+    private $fields = [];
+    public function validation(){}
+    public function submit(){}
 
-   public function hello(){
-
-    }
 }
