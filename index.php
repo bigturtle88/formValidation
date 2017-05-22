@@ -26,8 +26,8 @@ spl_autoload_register('autoload');
 $form = new \Helpers\Form();
 
 $fields = [
-    ['name' => 'name', 'value' => 'aaa', 'type' => 'text', 'validation' => ['max' => 4, 'min' => 1, 'type' => 'string']],
-    ['name' => 'fio', 'value' => 'bbb', 'type' => 'text', 'validation' => ['max' => 14, 'min' => 3, 'type' => 'int']]
+    ['name' => 'name', 'value' => 'Hello', 'type' => 'text', 'validation' => ['max' => 4, 'min' => 1, 'type' => 'string']],
+    ['name' => 'data', 'value' => 'Hello', 'type' => 'text', 'validation' => ['max' => 14, 'min' => 3, 'type' => 'int']]
 ];
 
 $form->setFields($fields);
