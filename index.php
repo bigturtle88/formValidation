@@ -23,15 +23,15 @@ function autoload($className)
 
 spl_autoload_register('autoload');
 
-$Form = new \Helpers\Form();
+$form = new \Helpers\Form();
 
 $fields = [
     ['name' => 'name', 'value' => 'aaa', 'type' => 'text', 'validation' => ['max' => 4, 'min' => 1, 'type' => 'string']],
     ['name' => 'fio', 'value' => 'bbb', 'type' => 'text', 'validation' => ['max' => 14, 'min' => 3, 'type' => 'int']]
 ];
 
-$Form->setFields($fields);
-$Form->setField(['name' => 'picture', 'value' => 'bbb2', 'type' => 'text']);
+$form->setFields($fields);
+$form->setField(['name' => 'picture', 'value' => 'bbb2', 'type' => 'text']);
 
 echo "<pre>";
-var_dump($a->validation());
+var_dump($form->validation());
