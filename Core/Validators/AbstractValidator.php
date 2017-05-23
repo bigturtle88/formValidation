@@ -13,6 +13,10 @@ use Core\Validators\InterfaceMax;
 use Core\Validators\InterfaceMin;
 use Core\Validators\InterfaceType;
 
+/**
+ * Class AbstractValidator  Описывает класс Валидатора
+ * @package Core\Validators
+ */
 abstract class AbstractValidator implements InterfaceMax, InterfaceMin, InterfaceType
 {
 
@@ -20,6 +24,11 @@ abstract class AbstractValidator implements InterfaceMax, InterfaceMin, Interfac
     {
     }
 
+    /**
+     * @param mixed $data
+     * @param int $value
+     * @return bool
+     */
     public function max($data, $value)
     {
         if (strlen($data) <= (int)$value) return true;
@@ -27,6 +36,11 @@ abstract class AbstractValidator implements InterfaceMax, InterfaceMin, Interfac
 
     }
 
+    /**
+     * @param mixed $data
+     * @param int $value
+     * @return bool
+     */
     public function min($data, $value)
     {
         if (strlen($data) >= (int)$value) return true;
@@ -34,6 +48,11 @@ abstract class AbstractValidator implements InterfaceMax, InterfaceMin, Interfac
 
     }
 
+    /**
+     * @param mixed $data
+     * @param int $value
+     * @return bool
+     */
     public function type($data, $value)
     {
         if (gettype($data) == $value) return true;

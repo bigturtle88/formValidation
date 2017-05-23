@@ -8,8 +8,18 @@
 
 namespace Core\Validators;
 
-
+/**
+ * Interface InterfaceType Описывает валидацию по типу данных
+ * @package Core\Validators
+ */
 interface InterfaceType
 {
+    /**
+     * Тип данных
+     *
+     * @param mixed $data
+     * @param string $value
+     * @return bool
+     */
     public function type($data, $value);
 }

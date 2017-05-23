@@ -31,7 +31,7 @@ $fields = [
 ];
 
 $form->setFields($fields);
-$form->setField(['name' => 'picture', 'value' => 'bbb2', 'type' => 'text']);
+$form->setField(['name' => 'picture', 'value' => 'Hello', 'type' => 'text']);
 
 echo "<pre>";
 var_dump($form->validation());
